@@ -116,8 +116,9 @@ python -m ipykernel install --user --name datamining-prj1-venv --display-name "P
 ## 4. Hướng dẫn chạy notebook
 
 ### 4.1 Tải Dataset
-- Trong file nộp đã có sẵn tabular và text Dataset rồi, còn image dataset do khá lớn nên sẽ cần tải thủ công từ GG Drive theo link trong folder image.
-- Tải xong thì thầy đặt các tập train/val/test vào thư mục image_data là được
+- Trong file nộp đã có sẵn tabular, còn image dataset và text dataset do khá lớn nên sẽ cần tải thủ công từ GG Drive theo link trong folder data/raw/image và data/raw/text.
+- Đối với image dataset thì sau khi tải xong thì đặt các tập train/val/test vào thư mục image_data là được
+- Đối với text dataset thì sau khi tải xong thì đặt file IMDB Dataset.csv vào thư mục text là được
 
 ### 4.2. Mở Jupyter
 
