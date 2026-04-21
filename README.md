@@ -75,6 +75,7 @@ Project sử dụng 3 loại dữ liệu chính:
 - Dạng bài toán: phân loại cảm xúc văn bản (sentiment classification).
 
 ## 3. Hướng dẫn cài đặt môi trường
+Link github: https://github.com/quanpro147/HCMUS-DataMining-Prj1.git
 
 > Yêu cầu chung: Python >= 3.10 và đang đứng tại thư mục gốc project.
 
@@ -84,7 +85,7 @@ Project sử dụng 3 loại dữ liệu chính:
 conda create -n datamining-prj1 python=3.10 -y
 conda activate datamining-prj1
 pip install -r requirements.txt
-python -m ipykernel install --user --name datamining-prj1 --display-name "Python (datamining-prj1)" (không bắt buộc)
+python -m ipykernel install --user --name datamining-prj1 --display-name "Python (datamining-prj1)"
 ```
 
 ### 3.2. Cách 2 - uv
