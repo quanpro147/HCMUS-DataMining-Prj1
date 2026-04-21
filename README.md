@@ -50,6 +50,8 @@ Project sử dụng 3 loại dữ liệu chính:
 	- Tổng: 10,000 ảnh
 - Đặc điểm: dữ liệu cân bằng giữa các lớp ở cả 3 split.
 - Dạng bài toán: phân loại ảnh nhiều lớp (multiclass classification).
+- Cách dữ liệu được thu thập tham khảo trong notebook: https://www.kaggle.com/code/chinhde/crawl-images-for-vegetable-classification
+- Nguồn dữ liệu gốc: https://www.freepik.com/search?ai=excluded&format=search&last_filter=people&last_value=exclude&people=exclude&sort=relevance&type=photo
 
 ### 2.2. Tabular dataset
 - Đường dẫn: `data/raw/tabular/adult.csv`
@@ -62,6 +64,8 @@ Project sử dụng 3 loại dữ liệu chính:
 - Các biến phân loại (categorical) chính:
 	- `workclass`, `education`, `marital.status`, `occupation`, `relationship`, `race`, `sex`, `native.country`
 - Bài toán: phân loại thu nhập nhị phân (binary classification).
+- Link Kaggle: https://www.kaggle.com/datasets/uciml/adult-census-income
+- Cách dữ liệu được thu thập: được lấy từ "1994 Census bureau database"
 
 ### 2.3. Text dataset
 - Đường dẫn: `data/raw/text/IMDB Dataset.csv`
@@ -69,6 +73,8 @@ Project sử dụng 3 loại dữ liệu chính:
 - Kích thước: 50,000 mẫu, 2 cột (`review`, `sentiment`).
 - Nhãn: `positive`, `negative` (cân bằng 50%-50%).
 - Dạng bài toán: phân loại cảm xúc văn bản (sentiment classification).
+- Link Kaggle: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+- Cách dữ liệu được thu thập tham khảo trong paper: http://ai.stanford.edu/~amaas/data/sentiment/
 
 ## 3. Hướng dẫn cài đặt môi trường
 Link github: https://github.com/quanpro147/HCMUS-DataMining-Prj1.git
