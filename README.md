@@ -12,21 +12,37 @@
 
 ## 2. Cấu trúc bài nộp
 
+```
+Group_11/
+├── data/
+│   └── raw/
+│       ├── image/
+│       ├── tabular/
+│       └── text/
+├── notebooks/
+│   ├── 01_EDA_image.ipynb
+│   ├── 02_preprocessing_image.ipynb
+│   ├── 03_EDA_tabular.ipynb
+│   ├── 04_preprocessing_tabular.ipynb
+│   ├── 05_EDA_text.ipynb
+│   └── 06_preprocessing_text.ipynb
+├── docs/
+├── README.md
+└── requirements.txt
+```
+
 ### 2.1 Folder data
-data/
-Chứa các tập dữ liệu raw và processed
+Chứa các tập dữ liệu raw của 3 loại dữ liệu: image, tabular, text.
 
 ### 2.2 Folder notebooks
-notebooks/
-Chứa các file notebook để chạy code
+Chứa các file notebook để chạy code.
 Cụ thể trong notebooks sẽ:
 - Trình bày sơ lược lý thuyết của từng phần
 - Trình bày code và kết quả
 - Đưa ra nhận xét và phân tích
 
-### 2.3 Folder report
-docs/
-Chứa báo cáo kết quả
+### 2.3 Folder docs
+Chứa báo cáo kết quả.
 Cụ thể trình bày:
 - Các biểu đồ, kết quả đạt được qua từng bước
 - Đưa ra phân tích chi tiết cụ thể hơn
@@ -37,8 +53,8 @@ Cụ thể trình bày:
 
 Project sử dụng 3 loại dữ liệu chính:
 
-### 2.1. Image dataset
-- Đường dẫn: `data/raw/image_data/`
+### 3.1. Image dataset
+- Đường dẫn: `data/raw/image/`
 - Cấu trúc chia tập: `train/`, `val/`, `test/`
 
 - Số lớp: 10 lớp ảnh rau/củ/quả
@@ -53,7 +69,7 @@ Project sử dụng 3 loại dữ liệu chính:
 - Cách dữ liệu được thu thập tham khảo trong notebook: https://www.kaggle.com/code/chinhde/crawl-images-for-vegetable-classification
 - Nguồn dữ liệu gốc: https://www.freepik.com/search?ai=excluded&format=search&last_filter=people&last_value=exclude&people=exclude&sort=relevance&type=photo
 
-### 2.2. Tabular dataset
+### 3.2. Tabular dataset
 - Đường dẫn: `data/raw/tabular/adult.csv`
 - Loại dữ liệu: dạng bảng, nhiều thuộc tính nhân khẩu học/kinh tế.
 - Kích thước: 32,561 records, 15 thuộc tính.
@@ -67,7 +83,7 @@ Project sử dụng 3 loại dữ liệu chính:
 - Link Kaggle: https://www.kaggle.com/datasets/uciml/adult-census-income
 - Cách dữ liệu được thu thập: được lấy từ "1994 Census bureau database"
 
-### 2.3. Text dataset
+### 3.3. Text dataset
 - Đường dẫn: `data/raw/text/IMDB Dataset.csv`
 - Nội dung: review phim tiếng Anh.
 - Kích thước: 50,000 mẫu, 2 cột (`review`, `sentiment`).
@@ -76,12 +92,12 @@ Project sử dụng 3 loại dữ liệu chính:
 - Link Kaggle: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 - Cách dữ liệu được thu thập tham khảo trong paper: http://ai.stanford.edu/~amaas/data/sentiment/
 
-## 3. Hướng dẫn cài đặt môi trường
+## 4. Hướng dẫn cài đặt môi trường
 Link github: https://github.com/quanpro147/HCMUS-DataMining-Prj1.git
 
 > Yêu cầu chung: Python >= 3.10 và đang đứng tại thư mục gốc project.
 
-### 3.1. Cách 1 - Conda
+### 4.1. Cách 1 - Conda
 
 ```bash
 conda create -n datamining-prj1 python=3.10 -y
@@ -90,7 +106,7 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name datamining-prj1 --display-name "Python (datamining-prj1)"
 ```
 
-### 3.2. Cách 2 - uv
+### 4.2. Cách 2 - uv
 
 ```bash
 # Cài uv (nếu máy chưa có)
@@ -100,6 +116,8 @@ pip install uv
 uv venv .venv
 # Windows PowerShell
 .\.venv\Scripts\Activate.ps1
+# Linux/macOS
+source .venv/bin/activate
 
 # Cài dependencies
 uv pip install -r requirements.txt
@@ -108,25 +126,27 @@ uv pip install -r requirements.txt
 python -m ipykernel install --user --name datamining-prj1-uv --display-name "Python (datamining-prj1-uv)"
 ```
 
-### 3.3. Cách 3 - venv
+### 4.3. Cách 3 - venv
 
 ```bash
 python -m venv .venv
 # Windows PowerShell
 .\.venv\Scripts\Activate.ps1
+# Linux/macOS
+source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 python -m ipykernel install --user --name datamining-prj1-venv --display-name "Python (datamining-prj1-venv)"
 ```
 
-## 4. Hướng dẫn chạy notebook
+## 5. Hướng dẫn chạy notebook
 
-### 4.1 Tải Dataset
-- Trong file nộp đã có sẵn tabular, còn image dataset và text dataset do khá lớn nên sẽ cần tải thủ công từ GG Drive theo link trong folder data/raw/image và data/raw/text.
-- Đối với image dataset thì sau khi tải xong thì đặt các tập train/val/test vào thư mục image_data là được
-- Đối với text dataset thì sau khi tải xong thì đặt file IMDB Dataset.csv vào thư mục text là được
+### 5.1 Tải Dataset
+- Trong file nộp đã có sẵn tabular, còn image dataset và text dataset do khá lớn nên sẽ cần tải thủ công từ GG Drive theo link trong file data/raw/image/image.txt và data/raw/text/text.txt.
+- Đối với image dataset thì sau khi tải xong thì đặt các tập train/val/test vào thư mục data/raw/image là được
+- Đối với text dataset thì sau khi tải xong thì đặt file IMDB Dataset.csv vào thư mục data/raw/text là được
 
-### 4.2. Mở Jupyter
+### 5.2. Mở Jupyter
 
 ```bash
 jupyter notebook
@@ -150,7 +170,7 @@ Sau đó mở thư mục `notebooks/` và chạy theo thứ tự gợi ý:
 Lưu ý:
 - Chọn đúng kernel đã tạo ở bước cài môi trường.
 
-## 5. Bảng phân công công việc
+## 6. Bảng phân công công việc
 
 | Họ và tên | Công việc | Mức độ hoàn thành |
 |---|---|---|
@@ -159,3 +179,4 @@ Lưu ý:
 | Vũ Nguyễn Trung Hiếu | Phần 1 (Image): Toàn bộ EDA, tiền xử lý (a, b, c, d) | 100% |
 | Châu Văn Minh Khoa | Phần 3 (Text): Toàn bộ EDA, tiền xử lý (a, b, c, d) | 100% |
 | Phan Ngọc Quân | Phần 1 (Image): Tiền xử lý (e, f); Phần 3 (Text): Tiền xử lý (e, f), viết báo cáo | 100% |
+
