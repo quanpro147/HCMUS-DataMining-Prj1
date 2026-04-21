@@ -10,7 +10,30 @@
 | 4 | Châu Văn Minh Khoa | 23122035 |
 | 5 | Phan Ngọc Quân | 23122046 |
 
-## 2. Mô tả tập dữ liệu
+## 2. Cấu trúc bài nộp
+
+### 2.1 Folder data
+data/
+Chứa các tập dữ liệu raw và processed
+
+### 2.2 Folder notebooks
+notebooks/
+Chứa các file notebook để chạy code
+Cụ thể trong notebooks sẽ:
+- Trình bày sơ lược lý thuyết của từng phần
+- Trình bày code và kết quả
+- Đưa ra nhận xét và phân tích
+
+### 2.3 Folder report
+docs/
+Chứa báo cáo kết quả
+Cụ thể trình bày:
+- Các biểu đồ, kết quả đạt được qua từng bước
+- Đưa ra phân tích chi tiết cụ thể hơn
+- Rút ra quyết định cuối cùng cho từng bước tiền xử lý của từng phần
+- Tổng hợp lại các quyết định và nhận xét về điểm mạnh, điểm yếu của từng phần
+
+## 3. Mô tả tập dữ liệu
 
 Project sử dụng 3 loại dữ liệu chính:
 
@@ -61,7 +84,7 @@ Project sử dụng 3 loại dữ liệu chính:
 conda create -n datamining-prj1 python=3.10 -y
 conda activate datamining-prj1
 pip install -r requirements.txt
-python -m ipykernel install --user --name datamining-prj1 --display-name "Python (datamining-prj1)"
+python -m ipykernel install --user --name datamining-prj1 --display-name "Python (datamining-prj1)" (không bắt buộc)
 ```
 
 ### 3.2. Cách 2 - uv
@@ -95,7 +118,11 @@ python -m ipykernel install --user --name datamining-prj1-venv --display-name "P
 
 ## 4. Hướng dẫn chạy notebook
 
-### 4.1. Mở Jupyter
+### 4.1 Tải Dataset
+- Trong file nộp đã có sẵn tabular và text Dataset rồi, còn image dataset do khá lớn nên sẽ cần tải thủ công từ GG Drive theo link trong folder image.
+- Tải xong thì thầy đặt các tập train/val/test vào thư mục image_data là được
+
+### 4.2. Mở Jupyter
 
 ```bash
 jupyter notebook
