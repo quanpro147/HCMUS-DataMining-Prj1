@@ -56,14 +56,11 @@ Project sử dụng 3 loại dữ liệu chính:
 - Loại dữ liệu: dạng bảng, nhiều thuộc tính nhân khẩu học/kinh tế.
 - Kích thước: 32,561 records, 15 thuộc tính.
 - Nhãn mục tiêu: `income` với 2 lớp `<=50K` và `>50K`.
-- Phân bố lớp: khoảng `75.92%` (`<=50K`) và `24.08%` (`>50K`) -> dữ liệu lệch lớp nhẹ.
+- Phân bố lớp: khoảng `77.36%` và `22.64%`.
 - Các biến số (numeric) chính:
 	- `age`, `fnlwgt`, `education.num`, `capital.gain`, `capital.loss`, `hours.per.week`
 - Các biến phân loại (categorical) chính:
 	- `workclass`, `education`, `marital.status`, `occupation`, `relationship`, `race`, `sex`, `native.country`
-- Chất lượng dữ liệu:
-	- Một số giá trị thiếu được mã hóa dưới dạng `?` thay vì NaN.
-	- Tỷ lệ `?` cao nhất nằm ở `occupation` (~5.66%), kế đến `workclass` (~5.64%), `native.country` (~1.79%).
 - Bài toán: phân loại thu nhập nhị phân (binary classification).
 
 ### 2.3. Text dataset
@@ -71,7 +68,6 @@ Project sử dụng 3 loại dữ liệu chính:
 - Nội dung: review phim tiếng Anh.
 - Kích thước: 50,000 mẫu, 2 cột (`review`, `sentiment`).
 - Nhãn: `positive`, `negative` (cân bằng 50%-50%).
-- Độ dài review trung bình: khoảng 1,309 ký tự/review.
 - Dạng bài toán: phân loại cảm xúc văn bản (sentiment classification).
 
 ## 3. Hướng dẫn cài đặt môi trường
