@@ -95,7 +95,7 @@ Project sử dụng 3 loại dữ liệu chính:
 ## 4. Hướng dẫn cài đặt môi trường
 Link github: https://github.com/quanpro147/HCMUS-DataMining-Prj1.git
 
-> Yêu cầu chung: Python >= 3.10 và đang đứng tại thư mục gốc project.
+> Yêu cầu chung: Python = 3.10 và đang đứng tại thư mục gốc project.
 
 ### 4.1. Cách 1 - Conda
 
